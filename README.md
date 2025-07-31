@@ -57,7 +57,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 Once your Python virtual environment is activated, please install `FastAPI` and `Uvicorn` packages:
 
 ```bash
-pip install fastapi uvicorn[standard]
+pip install fastapi "uvicorn[standard]"
 ```
 
 ### 3. 📝 Create Backend using FastAPI
