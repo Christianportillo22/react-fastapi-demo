@@ -474,6 +474,28 @@ Your app is now live at: <http://localhost:5173>
 | PUT    | `/todos/{id}/complete` | Mark a todo as completed     |
 | DELETE | `/todos/{id}` | Delete a todo     |
 
+## HTTP Methods Summary
+
+Below is a table summarizing the standard HTTP methods, their properties, and typical use cases.
+
+| Method    | Safe  | Idempotent | Cacheable | Typical Use Case                                      |
+|-----------|-------|------------|-----------|-------------------------------------------------------|
+| `GET`     | Yes   | Yes        | Yes       | Retrieve a resource or list of resources              |
+| `HEAD`    | Yes   | Yes        | Yes       | Retrieve headers only (same as GET without body)      |
+| `POST`    | No    | No         | No        | Create a new resource or trigger a process            |
+| `PUT`     | No    | Yes        | No        | Replace a resource entirely or create if not exists   |
+| `DELETE`  | No    | Yes        | No        | Delete a specified resource                           |
+| `PATCH`   | No    | No         | No        | Apply partial updates to a resource                   |
+| `OPTIONS` | Yes   | Yes        | No        | Describe communication options for the target resource|
+| `TRACE`   | Yes   | Yes        | No        | Echo the received request (for debugging)             |
+| `CONNECT` | No    | No         | No        | Establish a tunnel to the server (e.g., for HTTPS)    |
+
+## Notes
+
+- **Safe**: The method does not modify the resource on the server.
+- **Idempotent**: Multiple identical requests have the same effect as a single request.
+- **Cacheable**: Responses can be stored and reused under appropriate conditions.
+
 ## 🧪 Test it
 
 ### 1. Start the backend
@@ -524,3 +546,10 @@ Following use cases are some of most common
 - RESTful APIs with modern UIs
 - Microservices-based apps
 - Lightweight frontends for ML/AI backends
+
+## References
+
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [React + Vite](https://v3.vitejs.dev/guide/)
+- [React](https://es.react.dev/)
+- [HTTP Methods](https://developer.mozilla.org/es/docs/Web/HTTP/Guides/Overview)
