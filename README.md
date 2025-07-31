@@ -68,14 +68,14 @@ Backend will have following structure:
 todo_backend/
 ├── main.py
 ├── models.py
-├── service.py
+├── services.py
 └── todo_store.py
 ```
 
-First let's create the models in `model.py`, models are used for typing validation across the backend application:
+First let's create the models in `models.py`, models are used for typing validation across the backend application:
 
 ```python
-# model.py
+# models.py
 from pydantic import BaseModel
 
 class TodoCreate(BaseModel):
@@ -120,10 +120,10 @@ class TodoStore:
 
 ```
 
-After create the service layer in `service.py`, it will be our layer to manage Storage client(e,g, DB client, TodoStore class):
+After create the service layer in `services.py`, it will be our layer to manage Storage client(e,g, DB client, TodoStore class):
 
 ```python
-# service.py
+# services.py
 from models import Todo, TodoCreate
 from todo_store import TodoStore
 
